@@ -1,0 +1,68 @@
+li {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--Rose-100);
+
+  img {
+    height:44px;
+  }
+
+  .item-info {
+    color:var(--Rose-900);
+    font-size: 14px;
+    font-weight: 500;
+    width: stretch;
+
+    .item-cost {
+      margin-top: 8px;
+      display: flex;
+      font-size: 12px;
+
+      .item-quantity {
+        color: var(--Red);
+        font-weight: 600;
+        margin-right: 12px;
+      }
+
+      .cost-item {
+        color: var(--Rose-500);
+        margin-right: 8px;
+        font-weight: 500;
+      }
+
+      .cost-bundle{
+        color: var(--Rose-500);
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+  }
+  button {
+    background-color: transparent;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--Rose-400);
+      border-radius: 50%;
+      color: var(--Rose-400);
+    }
+  }
+  button:hover div {
+    color: var(--Rose-900);
+    border: 1px solid var(--Rose-900);
+  }
+  .cost-bundle{
+    display: flex;
+    align-items: center;
+    color: var(--Rose-500);
+    font-weight: 600;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,14 @@
+<article>
+  <div class="image-container">
+    <img [class]="{'active': quantity() > 0 }"
+    [src]="product().image.desktop" alt="">
+    <app-add-to-cart-button
+    [productCount]="quantity()"
+    [product]= "product()"/>
+  </div>
+  <div class="text-container">
+    <p>{{product().category}}</p>
+    <h1>{{product().name}}</h1>
+    <h2>{{`${product().price}` | currency }}</h2>
+  </div>
+</article>

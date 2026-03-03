@@ -1,0 +1,14 @@
+<div class="main-page">
+  <main>
+    <h1>Desserts</h1>
+    <div class="product-grid">
+      @for (product of productList; track $index) {
+      <app-product-card
+      [product]="product"
+      />
+      }
+    </div>
+  </main>
+  <app-cart-list class="cart"/>
+</div>
+<app-order-confirmed-modal class="modal" [class.hidden]="!productCart.orderConfirmed()"/>

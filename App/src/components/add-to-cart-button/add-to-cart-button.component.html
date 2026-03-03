@@ -1,0 +1,32 @@
+<div class="button-container">
+  @if (productCount() === 0) {
+   <button
+   class="add-to-cart-button"
+   type="button"
+   (click)="addProduct()">
+      <img src="assets/images/icon-add-to-cart.svg" alt="">
+      <span>Add to Cart</span>
+    </button>
+  }
+  @else {
+    <div class="product-count">
+      <button
+      class="decrease"
+      type="button"
+      (click)="removeProduct()">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="none" viewBox="0 0 10 2"><path fill="currentColor" d="M0 .375h10v1.25H0V.375Z"/></svg>
+        </div>
+      </button>
+      <span>{{productCount()}}</span>
+      <button
+      class="increase"
+      type="button"
+      (click)="addProduct()">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 10 10"><path fill="currentColor" d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"/></svg>
+        </div>
+      </button>
+    </div>
+  }
+</div>

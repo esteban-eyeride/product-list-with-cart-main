@@ -1,0 +1,22 @@
+<div class="container" [class.hidden]="!cartService.orderConfirmed()">
+  <img src="assets/images/icon-order-confirmed.svg" alt="" width="36px">
+  <div class="title">
+    <h1>Order Confirmed</h1>
+    <p>We hope you enjoy your food!</p>
+  </div>
+  <ul>
+    @for (item of cartService.cart(); track item.name) {
+      <app-cart-list-item
+      [productName]="item.name"
+      [productQuantity]="item.quantity ?? 1"
+      [productPrice]="item.price"
+      [ProductImage]="item.image.thumbnail"
+      [componentType]="'confirmed'"/>
+    }
+    <li>
+      Order Total
+      <h2>{{this.cartService.orderTotal() | currency}}</h2>
+    </li>
+  </ul>
+  <button (click)="cartService.startNewOrder()">Start New Order</button>
+</div>
